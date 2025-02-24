@@ -1,0 +1,15 @@
+.bg-333 {
+  background-color: #333;
+}
+
+.scale {
+  transition: 0.2s;
+}
+
+.scale:hover {
+  scale: 1.05;
+}
+
+.scale:active {
+  scale: 1;
+}
