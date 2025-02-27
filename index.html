@@ -27,11 +27,11 @@
         <div class="col-md-8 col-lg-6">
           <!-- Title -->
           <p class="text-center display-4 mb-3 text-white">
-            To-Do List
+            To-Do List (<span id="taskNumber">0</span> Tasks)
           </p>
           <div class="row">
             <div class="col-8">
-              <input type="text" id="taskInput" class="form-control" placeholder="Enter a Task">
+              <input type="text" id="taskInput" class="form-control border border-1 border-white bg-transparent text-white" placeholder="Enter a Task">
             </div>
             <div class="col-4">
               <button id="addTaskBtn" class="btn btn-transparent w-100 border border-white border-1 text-white scale">
@@ -40,7 +40,7 @@
             </div>
           </div>
           <ul id="taskList" class="list-group mt-3"></ul>
-          <button id="clearTaskBtn" class="btn btn-transparent w-100 border border-danger border-1 text-danger scale mt-3">
+          <button id="clearTaskBtn" class="btn btn-transparent w-100 border border-danger border-1 text-danger scale my-3">
             Clear All Tasks
           </button>
         </div>
