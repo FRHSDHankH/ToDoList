@@ -59,7 +59,7 @@ function displayTasks() {
       <div class='col-6 d-flex align-items-center justify-content-start'>${task}</div>
       <div class='col-6 d-flex align-items-center justify-content-end'>
         <button class='mx-2 w-25 btn btn-transparent btn-sm text-success border border-success scale' onclick='highlightTask(this)'> √ </button> 
-        <button class='mx-2 w-25 btn btn-transparent btn-sm text-danger border border-danger scale' onclick='removeTask(${index})'>  </button>
+        <button class='mx-2 w-25 btn btn-transparent btn-sm text-danger border border-danger scale' onclick='removeTask(${index})'> &#x1F5D1 </button>
       </div>
     </div>`;
     // Append the new task to the task list
@@ -71,7 +71,7 @@ function displayTasks() {
 
 // Function to highlight task when check mark is pressed
 function highlightTask(buttonElement) {
-  buttonElement.parentElement.parentElement.classList.add('bg-highlight')
+  buttonElement.parentElement.parentElement.parentElement.classList.toggle('bg-highlight')
   
 }
 
@@ -82,6 +82,7 @@ function removeTask(index) {
 
   // Call the function to update the task list display
   displayTasks();
+  taskNumber.innerText = tasks.length;
 }
 
 // Event listener for the "Clear All Tasks" button
